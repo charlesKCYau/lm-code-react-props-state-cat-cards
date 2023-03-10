@@ -112,7 +112,7 @@ const images = [
   },
 ];
 
-interface CatCardProps {
+interface CardProps {
   name: string;
   species: string;
   favFoods: Array<string>;
@@ -120,14 +120,16 @@ interface CatCardProps {
   catIndex: number;
 }
 
-const CatCard: React.FC<CatCardProps> = ({ name, species, favFoods, birthYear, catIndex }) => {
+const Card: React.FC<CardProps> = ({ name, species, favFoods, birthYear, catIndex }) => {
+    const foods = favFoods.join(", ");
   return (
     <div className="card">
       <h3 className="card__text card__header">{name}</h3>
       <p className="card__text">Species: {species}</p>
-      <p className="card__text">Favourite Food(s): {favFoods}</p>
+      {/* <p className="card__text">Favourite Food(s): {favFoods}</p> */}
+      <p className="card__text">Favourite Food(s): {foods}</p>
       <p className="card__text">Birth Year: {birthYear}</p>
-      {catIndex < images.length && (
+      {catIndex !== -1 && catIndex < images.length && (
         <CatImage
           image={images[catIndex].image}
           altText={images[catIndex].altText}
@@ -140,4 +142,4 @@ const CatCard: React.FC<CatCardProps> = ({ name, species, favFoods, birthYear, c
     </div>
   );
 };
-export default CatCard;
+export default Card;
