@@ -2,7 +2,7 @@ import Cat from "./cat";
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
-const catData : Array<Cat> = [
+let catData : Array<Cat> = [
   {
     name: "Little Miss Purrfect",
     species: "Cat",

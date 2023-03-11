@@ -9,6 +9,7 @@ import catData from "./data/cat-data";
 import Dog from "./data/dog";
 import dogData from "./data/dog-data";
 import { v4 as uuidv4 } from 'uuid';
+import Form from "./components/form";
 
 function App(): JSX.Element {
   // JavaScript/TypeScript code can be inserted here!
@@ -47,6 +48,7 @@ function App(): JSX.Element {
               catIndex={-1}
             />
           ))}
+		  <Form cats={cats} setCats={setCats}/>
         </div>
       </main>
 

@@ -141,3 +141,32 @@ body {
 		padding-left: 1.5rem;
 	}
 }
+
+.form__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.input {
+	border: 2px solid red;
+	border-radius: 4px;
+	font-family: 'SleepyCat';
+	font-size: 2rem;
+	margin: 0.2em;
+	width: 400px;
+}
+
+.button {
+	border: 2px solid red;
+	border-radius: 4px;
+	font-family: 'SleepyCat';
+	font-size: 2rem;
+	margin: 0.2em;
+	width: 500px;
+}
+
+.button:hover {
+	opacity: 0.6;
+}
